@@ -8,14 +8,12 @@ public class WASDController : MonoBehaviour
 
     public float moveForce = 10f;
 
-    Vector3 testVec;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Debug.Log("START!!!");
 
-        rb = null;
     }
 
     // Update is called once per frame
@@ -25,7 +23,7 @@ public class WASDController : MonoBehaviour
 
         if (Input.GetKey(keyUp))
         {
-            rb.AddForce(testVec * moveForce);
+            rb.AddForce(transform.up * moveForce);
         }
     }
 }
